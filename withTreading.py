@@ -34,8 +34,6 @@ class FaceRecognition:
 
     async def run_recognition(self):
         video_capture = cv2.VideoCapture(0)
-        # rtsp
-        # video_capture = cv2.VideoCapture("rtsp://admin:L284AA25@192.168.40.218:554/cam/realmonitor?channel=1&subtype=0&unicast=true&proto=Onvif")
         
         if not video_capture.isOpened():
             sys.exit("Video source not found...")
