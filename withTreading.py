@@ -14,7 +14,7 @@ class FaceRecognition:
     def __init__(self):
         # Initialize Firebase
         cred = credentials.Certificate("db.json")
-        firebase_admin.initialize_app(cred, {"databaseURL": "https://product-page-94cad-default-rtdb.asia-southeast1.firebasedatabase.app"})
+        firebase_admin.initialize_app(cred, {"databaseURL": "firebase_db_url"})
         self.ref = db.reference('people')
 
         # Load known faces
