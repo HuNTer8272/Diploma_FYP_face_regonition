@@ -23,8 +23,9 @@ class FaceRecognition:
         self.encode_faces()
 
     def encode_faces(self):
-        for image in os.listdir('adesh'):
-            face_images = cv2.imread(f'adesh/{image}')
+        # Iterate through each image file in the 'known_faces' directory
+        for image in os.listdir('known_faces'):
+            face_images = cv2.imread(f'known_faces/{image}')
             face_encoding = self.face_encodings(face_images)
             if face_encoding:
                 self.known_face_encodings.append(face_encoding[0])
